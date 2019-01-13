@@ -1,0 +1,65 @@
+Arguments: 
+  /usr/local/Cellar/node/11.6.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js
+
+PATH: 
+  /usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/seb/.pyenv/bin:/Users/seb/.pyenv/shims:/Users/seb/google-cloud-sdk/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/go/bin:/opt/X11/bin:/Users/seb/.pyenv/shims:/Users/seb/.pyenv/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/seb/google-cloud-sdk/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  11.6.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENFILE: file table overflow, scandir '/Users/seb/blog/node_modules/source-map-support/node_modules/source-map/lib'
+
+npm manifest: 
+  {
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "blog",
+    "main": "server.js",
+    "scripts": {
+      "dev": "webpack -d --watch",
+      "start": "node ./server/server.js",
+      "build": "webpack -p",
+      "react-dev": "webpack -d --watch",
+      "server-dev": "nodemon ./server/server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sebasetian/Portfolio.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/sebasetian/Portfolio/issues"
+    },
+    "homepage": "https://github.com/sebasetian/Portfolio#readme",
+    "dependencies": {
+      "@babel/core": "^7.2.2",
+      "@babel/preset-env": "^7.2.3",
+      "@babel/preset-react": "^7.0.0",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^8.0.5",
+      "body-parser": "^1.18.3",
+      "express": "^4.16.4",
+      "nodemon": "^1.18.9",
+      "react": "^16.7.0",
+      "react-dom": "^16.7.0",
+      "react-router-dom": "^4.3.1",
+      "webpack": "^4.28.4"
+    },
+    "devDependencies": {
+      "webpack-cli": "^3.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
