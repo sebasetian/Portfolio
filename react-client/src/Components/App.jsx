@@ -4,14 +4,22 @@ import { browserHistory } from 'react-router';
 import HomePage from './HomePage';
 import NavBar from './HeaderComponent/NavBar';
 import Footer from './FooterComponent/Footer'
+import { Sticky } from 'semantic-ui-react'
 class App extends Component {
+    state = {}
+
+    handleContextRef = contextRef => this.setState({ contextRef })
     render() {
+        const { contextRef } = this.state
         return (
             <Router>
-                <div>
+                <div ref ={this.handleContextRef}>
                     <NavBar />
+                    
                     <Route name="home" exact path="/" component={HomePage} />
-                    <Footer />
+                    <Sticky context={contextRef}>
+                        <Footer />
+                    </Sticky>
                 </div>
             </Router>
         )
