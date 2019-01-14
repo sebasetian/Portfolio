@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { browserHistory } from 'react-router';
-import HomePage from './HomePage';
-import NavBar from './HeaderComponent/NavBar';
-import Footer from './FooterComponent/Footer'
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import HomePage from './HomePage'
+import NavBar from './HeaderComponent/NavBar'
+import AboutPage from './About'
 import { Sticky } from 'semantic-ui-react'
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import '../Css/Main.css'
 class App extends Component {
     state = {}
     handleContextRef = contextRef => this.setState({ contextRef })
@@ -12,13 +13,26 @@ class App extends Component {
         const { contextRef } = this.state
         return (
             <Router>
-                <div ref ={this.handleContextRef}>
-                    <Sticky context={contextRef}>
-                        <NavBar />
-                    </Sticky>
-                    <Route name="home" exact path="/" component={HomePage} />
-                    
-                </div>
+                <Route
+                    render={({ location }) => (
+                        <div ref ={this.handleContextRef}>
+                            <NavBar />
+                            <TransitionGroup>
+                                <CSSTransition
+                                    key={location.key}
+                                    classNames="fade"
+                                    timeout={300}
+                                >
+                                    <Switch location={location}>
+                                        <Route exact name="home"  path="/" component={HomePage} />
+                                        <Route exact name="about" path='/about' component={AboutPage} />
+                                    </Switch>
+                                </CSSTransition>
+                            </TransitionGroup>
+                            <NavBar />
+                        </div>
+                    )}
+                    />
             </Router>
         )
     }

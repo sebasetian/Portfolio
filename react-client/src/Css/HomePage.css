@@ -1,6 +1,6 @@
 .HomePageSeg {
     min-height: 700px;
-    padding: '1em 0em';
+    padding: 1em 0em;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -16,4 +16,5 @@
     width: 20%;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 2em;
 }

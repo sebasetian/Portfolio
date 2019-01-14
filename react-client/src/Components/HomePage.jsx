@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
 import {
     Button,
     Header,
@@ -9,7 +8,7 @@ import {
     Icon
 } from 'semantic-ui-react'
 import '../Css/HomePage.css'
-import photo from '../Images/photo.jpg'; // Import using relative path
+import photo from '../Images/photo.jpg' // Import using relative path
 const getWidth = () => {
     const isSSR = typeof window === 'undefined'
     return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
@@ -19,7 +18,7 @@ const HomepageHeading = () => (
         <Image src={photo} size='medium'
          style={{
             marginBottom: '3em',
-            marginTop:'10em'
+            marginTop:'10%'
         }} 
         circular/>
         <Header

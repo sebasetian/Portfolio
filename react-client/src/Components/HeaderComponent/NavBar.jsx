@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, Segment, Rail } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Link, withRouter } from 'react-router-dom'
+import { Menu, Segment } from 'semantic-ui-react'
 class NavBar extends Component {
   state = {}
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name })
+    if (name == 'home') name = ''
+    this.props.history.push("/" + name);
+  }
+  
   render() {
     const { activeItem } = this.state
     return (
@@ -14,13 +19,14 @@ class NavBar extends Component {
               name ='home'
               onClick = {this.handleItemClick}
             >
-            <Link to="">Main</Link>
+              Main
             </Menu.Item>
             <Menu.Item
               name='about'
               onClick={this.handleItemClick}
+              
             >
-              <Link to="">About</Link>
+              About
             </Menu.Item>
             <Menu.Item
               name='projects'
@@ -41,4 +47,4 @@ class NavBar extends Component {
     )
   }
 }
-export default NavBar;
+export default withRouter(NavBar);
