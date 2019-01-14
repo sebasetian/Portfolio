@@ -7,19 +7,17 @@ import Footer from './FooterComponent/Footer'
 import { Sticky } from 'semantic-ui-react'
 class App extends Component {
     state = {}
-
     handleContextRef = contextRef => this.setState({ contextRef })
     render() {
         const { contextRef } = this.state
         return (
             <Router>
                 <div ref ={this.handleContextRef}>
-                    <NavBar />
-                    
-                    <Route name="home" exact path="/" component={HomePage} />
                     <Sticky context={contextRef}>
-                        <Footer />
+                        <NavBar />
                     </Sticky>
+                    <Route name="home" exact path="/" component={HomePage} />
+                    
                 </div>
             </Router>
         )

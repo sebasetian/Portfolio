@@ -9,49 +9,33 @@ class NavBar extends Component {
     return (
       <header>
         <Segment inverted>
-          <Menu inverted>
-            <Menu.Item>
-              Shih-Yao (Sebastian) Lin
+          <Menu widths={4} inverted size='massive'>
+            <Menu.Item
+              name ='home'
+              onClick = {this.handleItemClick}
+            >
+            <Link to="">Main</Link>
             </Menu.Item>
-            <Menu.Menu position='right'>
-              <Menu.Item
-                name ='home'
-                active = {activeItem === 'home'}
-                onClick = {this.handleItemClick}
-              >
-                <Link to="">Home</Link>
-              </Menu.Item>
-              <Menu.Item
-                name='about'
-                active={activeItem === 'about'}
-                onClick={this.handleItemClick}
-              >
-                <Link to="">About</Link>
-              </Menu.Item>
-              <Menu.Item
-                name='projects'
-                active={activeItem === 'projects'}
-                onClick={this.handleItemClick}
-              >
-                <Link to="">Projects</Link>
-              </Menu.Item>
-              <Menu.Item
-                name='blog'
-                active={activeItem === 'blog'}
-                onClick={this.handleItemClick}
-              >
-                <Link to="">Blog</Link>
-              </Menu.Item>
-              <Menu.Item
-                name='resume'
-                active={activeItem === 'resume'}
-                onClick={this.handleItemClick}
-              >
-                <Link to="">Resume/CV</Link>
-              </Menu.Item>
-            </Menu.Menu>
+            <Menu.Item
+              name='about'
+              onClick={this.handleItemClick}
+            >
+              <Link to="">About</Link>
+            </Menu.Item>
+            <Menu.Item
+              name='projects'
+              onClick={this.handleItemClick}
+            >
+              <Link to="">Projects</Link>
+            </Menu.Item>
+            <Menu.Item
+              name='resume'
+              active={activeItem === 'resume'}
+              onClick={this.handleItemClick}
+            >
+              <Link to="">Resume/CV</Link>
+            </Menu.Item>
           </Menu>
-          
         </Segment>
       </header>
     )

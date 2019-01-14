@@ -1,0 +1,19 @@
+.HomePageSeg {
+    min-height: 700px;
+    padding: '1em 0em';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.links {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: space-between;
+}

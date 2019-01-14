@@ -2,68 +2,80 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import {
     Button,
-    Container,
-    Divider,
-    Grid,
     Header,
-    Icon,
-    Image,
-    List,
-    Menu,
     Responsive,
     Segment,
-    Sidebar,
-    Visibility,
+    Image,
+    Icon
 } from 'semantic-ui-react'
+import '../Css/HomePage.css'
+import photo from '../Images/photo.jpg'; // Import using relative path
 const getWidth = () => {
     const isSSR = typeof window === 'undefined'
     return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 const HomepageHeading = () => (
-    <Container text>
+    <div class="Heading" >
+        <Image src={photo} size='medium'
+         style={{
+            marginBottom: '3em',
+            marginTop:'10em'
+        }} 
+        circular/>
         <Header
             as='h1'
-            content='Imagine-a-Company'
+            content='Shih-Yao Lin'
             style={{
                 fontSize:  '4em',
                 fontWeight: 'normal',
-                marginBottom: 0,
-                marginTop: '3em',
+                marginBottom: 0
             }}
         />
         <Header
             as='h2'
-            content='Do whatever you want when you want to.'
+            content='Computer Science Master Student with a passion for 
+            Web, Mobile Development and Natural Language Processing'
             style={{
                 fontSize: '1.7em',
                 fontWeight: 'normal',
                 marginTop: '1.5em',
+                marginBottom: '2em'
             }}
         />
-        <Button primary size='huge'>
-            Get Started
-<Icon name='right arrow' />
-        </Button>
-    </Container>
+    </div>
 )
-
+const OuterLink = () => (
+    <div class='links'>
+        <a href='mailto:sebasetian123@gmail.com' target='_top'>
+            <Button icon>
+                <Icon name='mail'/>Mail
+            </Button>
+        </a>
+        <a href='https://www.linkedin.com/in/shih-yao-lin/' target='_blank'>
+            <Button icon color='linkedin'>
+                <Icon name='linkedin' />LinkedIn
+            </Button>
+        </a>
+        <a href='https://github.com/sebasetian' target='_blank'>
+            <Button icon>
+                <Icon name='github' />Github
+            </Button>
+        </a>
+        <a href='https://medium.com/@sebasetian123' target='_blank'>
+            <Button icon color='medium'>
+                <Icon name='medium' />Medium
+            </Button>
+        </a>
+    </div>
+)
 class HomePage extends Component {
     render() {
         return (
             <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-                <Visibility
-                    once={false}
-                    onBottomPassed={this.showFixedMenu}
-                    onBottomPassedReverse={this.hideFixedMenu}
-                >
-                    <Segment
-                        textAlign='center'
-                        style={{ minHeight: 700, padding: '1em 0em' }}
-                        vertical
-                    >
-                        <HomepageHeading />
-                    </Segment>
-                </Visibility>
+                <Segment className='HomePageSeg' vertical >
+                    <HomepageHeading />
+                    <OuterLink />
+                </Segment>
             </Responsive>
         )
     }
