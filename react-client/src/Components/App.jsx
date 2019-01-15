@@ -25,7 +25,7 @@ class App extends Component {
                                 >
                                     <Switch location={location}>
                                         <Route exact name="home"  path="/" component={HomePage} />
-                                        <Route exact name="about" path='/about' component={AboutPage} />
+                                        <Route name="about" path='/about' component={AboutPage} />
                                     </Switch>
                                 </CSSTransition>
                             </TransitionGroup>
