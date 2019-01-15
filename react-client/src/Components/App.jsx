@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import HomePage from './HomePage'
 import NavBar from './HeaderComponent/NavBar'
 import AboutPage from './About'
-import { Sticky } from 'semantic-ui-react'
+import ResumePage from './Resume'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import '../Css/Main.css'
 class App extends Component {
@@ -26,6 +26,7 @@ class App extends Component {
                                     <Switch location={location}>
                                         <Route exact name="home"  path="/" component={HomePage} />
                                         <Route name="about" path='/about' component={AboutPage} />
+                                        <Route name="resume" path='/resume' component={ResumePage} />
                                     </Switch>
                                 </CSSTransition>
                             </TransitionGroup>

@@ -26,6 +26,10 @@ module.exports = {
                 loader: 'file-loader'
             },
             {
+                test: /\.pdf/,
+                loader: 'file-loader'
+            },
+            {
                 test: /\.jsx?/,
                 include: SRC_DIR,
                 loader: 'babel-loader',
