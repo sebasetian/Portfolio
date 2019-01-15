@@ -23,21 +23,19 @@ class NavBar extends Component {
             </Menu.Item>
             <Menu.Item
               name='about'
-              onClick={this.handleItemClick}
-              
+              onClick={this.handleItemClick}      
             >
               About
             </Menu.Item>
             <Menu.Item
               name='projects'
-              onClick={this.handleItemClick}
+              onClick={this.handleItemClick}      
             >
               <Link to="">Projects</Link>
             </Menu.Item>
             <Menu.Item
               name='resume'
-              active={activeItem === 'resume'}
-              onClick={this.handleItemClick}
+              onClick={this.handleItemClick}      
             >
               <Link to="">Resume/CV</Link>
             </Menu.Item>
