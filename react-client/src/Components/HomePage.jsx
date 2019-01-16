@@ -79,7 +79,7 @@ class HomePage extends Component {
     render() {
         return (
             <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-                <h5>Last updated: 1/16/2019</h5>
+                <h5>Last updated: 1/15/2019</h5>
                 <Segment className='HomePageSeg' vertical >
                     <HomepageHeading />
                     <OuterLink />
