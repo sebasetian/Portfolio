@@ -4,6 +4,7 @@ import HomePage from './HomePage'
 import NavBar from './HeaderComponent/NavBar'
 import AboutPage from './About'
 import ResumePage from './Resume'
+import ProjectPage from './Project'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import '../Css/Main.css'
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
                                     <Switch location={location}>
                                         <Route exact name="home"  path="/" component={HomePage} />
                                         <Route name="about" path='/about' component={AboutPage} />
+                                        <Route name="project" path='/projects' component={ProjectPage} />
                                         <Route name="resume" path='/resume' component={ResumePage} />
                                     </Switch>
                                 </CSSTransition>

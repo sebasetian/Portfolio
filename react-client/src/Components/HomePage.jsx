@@ -37,7 +37,15 @@ const HomepageHeading = () => (
             style={{
                 fontSize: '1.7em',
                 fontWeight: 'normal',
-                marginTop: '1.5em',
+                marginTop: '1.5em'
+            }}
+        />
+        <Header
+            as='p'
+            content='Welcome to my personal website! You can find my contact information, Resume and projects here'
+            style={{
+                fontSize: '1.3em',
+                fontWeight: 'normal',
                 marginBottom: '2em'
             }}
         />
@@ -71,6 +79,7 @@ class HomePage extends Component {
     render() {
         return (
             <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+                <h5>Last updated: 1/16/2019</h5>
                 <Segment className='HomePageSeg' vertical >
                     <HomepageHeading />
                     <OuterLink />

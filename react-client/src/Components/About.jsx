@@ -18,7 +18,7 @@ import pythonpic from '../Images/iconfinder_Python_logo_282803.png'
 import tspic from '../Images/typescript.png'
 import reactpic from '../Images/react.png'
 import rxpic from '../Images/tech-reactivex.png'
-import techstackpic from '../Images/icon-technology-stack.png'
+import techstackpic from '../Images/icon-technology-stack.jpg'
 export default class AboutPage extends Component {
     render() {
         return (
@@ -62,7 +62,7 @@ export default class AboutPage extends Component {
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://www.jqueryscript.net'
-                                            src={jquerypic} size='tiny' />
+                                            src={jquerypic} size='small' />
                                     </Grid.Column>
                                     <Grid.Column width={2}>
                                         <Image 
@@ -74,7 +74,7 @@ export default class AboutPage extends Component {
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://angular.io'
-                                            src={angularpic} size='tiny' />
+                                            src={angularpic} size='small' />
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row verticalAlign='middle'>
@@ -114,7 +114,7 @@ export default class AboutPage extends Component {
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://developer.android.com'
-                                            src={androidpic} size='tiny' />
+                                            src={androidpic} size='small' />
                                     </Grid.Column>
                                     <Grid.Column width={2}>
                                         <Image as='a'
@@ -129,27 +129,27 @@ export default class AboutPage extends Component {
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://www.java.com/'
-                                            src={javapic} size='tiny' />
+                                            src={javapic} size='small' />
                                     </Grid.Column>
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://www.javascript.com'
-                                            src={jspic} size='tiny' />
+                                            src={jspic} size='small' />
                                     </Grid.Column>
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='http://www.typescriptlang.org'
-                                            src={tspic} size='tiny' />
+                                            src={tspic} size='small' />
                                     </Grid.Column>
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://www.python.org'
-                                            src={pythonpic} size='tiny' />
+                                            src={pythonpic} size='small' />
                                     </Grid.Column>
                                     <Grid.Column width={2}>
                                         <Image as='a'
                                             href='https://kotlinlang.org'
-                                            src={kotlinpic} size='tiny' />
+                                            src={kotlinpic} size='small' />
                                     </Grid.Column>
                                 </Grid.Row>
                             </Grid>

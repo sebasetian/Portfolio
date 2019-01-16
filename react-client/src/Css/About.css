@@ -1,12 +1,13 @@
 .about {
     padding-top: 5em;
     padding-bottom: 3em;
-    min-height: 700px;
+    min-height: 100vh;
 }
 .text {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .tech {
-    height: 500px;
+    min-height: 500px;
+    padding-bottom: 3em;
 }
